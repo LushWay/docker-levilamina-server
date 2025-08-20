@@ -14,6 +14,9 @@ RUN dpkg --add-architecture i386 \
  && wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources \
  && sed -i -e's/ main/ main contrib/g' /etc/apt/sources.list.d/debian.sources
 
+RUN sed -i 's/^# *\(ru_RU.UTF-8\)/\1/' /etc/locale.gen
+RUN locale-gen
+
 RUN apt update \
  && apt install -y --install-recommends winehq-stable \
                                         winetricks \
