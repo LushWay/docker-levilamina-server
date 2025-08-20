@@ -2,7 +2,9 @@ services:
   levilamina-server:
     image: ghcr.io/liteldev/levilamina-server:latest-wine
     environment:
-      EULA: TRUE
+      LC_ALL: ru_RU.UTF-8
+      LANG: ru_RU.UTF-8
+      LANGUAGE: ru_RU.UTF-8
     ports:
       - 19132:19132/udp
     volumes:
