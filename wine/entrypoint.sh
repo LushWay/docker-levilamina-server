@@ -30,4 +30,4 @@ if [ ! -f "bedrock_server_mod.exe" ]; then
     fi
 fi
 
-cat | wineconsole --backend=curses bedrock_server_mod.exe
+wine64 bedrock_server_mod.exe
