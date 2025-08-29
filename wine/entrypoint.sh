@@ -35,4 +35,5 @@ if [ ! -f "run.sh" ]; then
     chmod +x run.sh
 fi
 
+cat run.sh
 run.sh
