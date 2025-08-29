@@ -30,4 +30,9 @@ if [ ! -f "bedrock_server_mod.exe" ]; then
     fi
 fi
 
-bash wine64 bedrock_server_mod.exe
+if [ ! -f "run.sh" ]; then
+    echo "cat | wine64 bedrock_server_mod.exe" > run.sh 
+    chmod +x run.sh
+fi
+
+run.sh
