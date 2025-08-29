@@ -30,4 +30,4 @@ if [ ! -f "bedrock_server_mod.exe" ]; then
     fi
 fi
 
-wine64 bedrock_server_mod.exe
+bash wine64 bedrock_server_mod.exe
